@@ -1,0 +1,16 @@
+[package]
+name = "myhostid"
+version = "0.1.0"
+edition = "2021"
+description = "A configurable replacement for the hostid command"
+license = "MIT"
+
+[[bin]]
+name = "hostid"
+path = "src/main.rs"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
